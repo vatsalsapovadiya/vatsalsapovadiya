@@ -17,11 +17,11 @@ I focus on learning SOC tools, analyzing security logs, and building hands-on la
 ---
 
 ## 🧰 Tools & Technologies
-- **SIEM:** Wazuh  
+- **SIEM:** Wazuh, Splunk
 - **Logging:** Sysmon, Linux logs  
 - **Security:** Honeypots, IDS basics  
 - **OS:** Linux, Windows  
-- **Other:** Git, Bash (basic), Python (learning)
+- **Other:** Wireshark, 
 
 ---
 
