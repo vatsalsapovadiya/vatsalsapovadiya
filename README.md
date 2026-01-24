@@ -13,8 +13,8 @@
 
 ### 🔐 Security Operations Center Analyst | 🕵️ Threat Hunter | 🛡️ Incident Responder
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vatsalsapovadiya/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vatsalsapovadiya22@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://yourportfolio.com)
 
 </div>
@@ -77,27 +77,27 @@ Passionate **Security Operations Center Analyst** with expertise in threat detec
 
 ## 🚀 Featured Projects
 
-### 🕸️ [Honeypot Network Infrastructure](https://github.com/yourusername/honeypot-project)
+### 🕸️ [Honeypot Network Infrastructure](https://github.com/vatsalsapovadiya/honeypot-project)
 Deployed distributed honeypot network capturing 50,000+ attack vectors. Integrated with Splunk for real-time threat intelligence.
 - **Tech Stack:** AWS, Docker, Splunk, Python, Cowrie
 - **Key Achievement:** Reduced false positive rate by 35%
 
-### 🦠 [Ransomware Analysis Framework](https://github.com/yourusername/ransomware-analyzer)
+### 🦠 [Ransomware Analysis Framework](https://github.com/vatsalsapovadiya/ransomware-analyzer)
 Automated malware analysis pipeline for ransomware variants with custom decryptor development.
 - **Tech Stack:** Ghidra, REMnux, Python, YARA
 - **Key Achievement:** Successfully analyzed 100+ malware samples
 
-### 🤖 [SOAR Automation Platform](https://github.com/yourusername/soar-playbooks)
+### 🤖 [SOAR Automation Platform](https://github.com/vatsalsapovadiya/soar-playbooks)
 Security orchestration playbooks reducing MTTR from 45 minutes to 30 seconds for Tier 1 incidents.
 - **Tech Stack:** Ansible, Splunk SOAR, Python, TheHive
 - **Key Achievement:** Automated 80% of repetitive SOC tasks
 
-### 🎣 [Phishing Detection Engine](https://github.com/yourusername/phishing-detector)
+### 🎣 [Phishing Detection Engine](https://github.com/vatsalsapovadiya/phishing-detector)
 ML-powered phishing detection system with 98.5% accuracy and minimal false positives.
 - **Tech Stack:** Python, TensorFlow, NLP, VirusTotal API
 - **Key Achievement:** Blocked 10,000+ phishing attempts
 
-### 🌐 [Threat Intelligence Platform](https://github.com/yourusername/threat-intel)
+### 🌐 [Threat Intelligence Platform](https://github.com/vatsalsapovadiya/threat-intel)
 Centralized threat intelligence aggregation integrating OSINT feeds and commercial sources.
 - **Tech Stack:** MISP, Python, STIX/TAXII, Elasticsearch
 - **Key Achievement:** Processed 1M+ IoCs daily
@@ -108,11 +108,11 @@ Centralized threat intelligence aggregation integrating OSINT feeds and commerci
 
 <div align="center">
   
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F2FF&icon_color=00F2FF&text_color=FFFFFF)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=vatsalsapovadiya&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F2FF&icon_color=00F2FF&text_color=FFFFFF)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F2FF&text_color=FFFFFF)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vatsalsapovadiya&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F2FF&text_color=FFFFFF)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=tokyonight&hide_border=true&background=0D1117&ring=00F2FF&fire=00F2FF&currStreakLabel=00F2FF)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=vatsalsapovadiya&theme=tokyonight&hide_border=true&background=0D1117&ring=00F2FF&fire=00F2FF&currStreakLabel=00F2FF)
 
 </div>
 
@@ -185,8 +185,8 @@ Centralized threat intelligence aggregation integrating OSINT feeds and commerci
 
 I'm always interested in collaborating on cybersecurity projects, discussing threat intelligence, or sharing knowledge about SOC operations.
 
-- 💼 [LinkedIn](https://linkedin.com/in/yourprofile)
-- 📧 [Email](mailto:your.email@example.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/vatsalsapovadiya/)
+- 📧 [Email](mailto:vatsalsapovadiya22@gmail.com)
 - 🌐 [Portfolio](https://yourportfolio.com)
 - 🐦 [Twitter](https://twitter.com/yourhandle)
 
@@ -194,7 +194,7 @@ I'm always interested in collaborating on cybersecurity projects, discussing thr
 
 ## 💻 Activity Graph
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=yourusername&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F2FF&line=00F2FF&point=FFFFFF)](https://github.com/yourusername)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=vatsalsapovadiya&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F2FF&line=00F2FF&point=FFFFFF)](https://github.com/vatsalsapovadiya)
 
 ---
 
@@ -202,8 +202,8 @@ I'm always interested in collaborating on cybersecurity projects, discussing thr
 
 ### 🔐 "In cybersecurity, it's not about if you get breached, but when. Be prepared."
 
-![Profile Views](https://komarev.com/ghpvc/?username=yourusername&color=00F2FF&style=flat-square&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=vatsalsapovadiya&color=00F2FF&style=flat-square&label=Profile+Views)
 
-**⭐ From [yourusername](https://github.com/yourusername)**
+**⭐ From [vatsalsapovadiya](https://github.com/vatsalsapovadiya)**
 
 </div>
