@@ -1,6 +1,6 @@
 # 👋 Hello, I'm Vatsal Sapovadiya
 
-<div align="center">
+<div align="right">
   
 ```ascii
  ____   ___   ____      _                _           _   
