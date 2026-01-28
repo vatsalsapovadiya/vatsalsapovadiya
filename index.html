@@ -19,196 +19,81 @@
             --kali-accent: #0066ff;
             --kali-red: #ff0055;
             --kali-green: #00ff41;
-            --terminal-bg: #000000;
             --text-main: #f8f8f2;
             --text-muted: #8b92a8;
             --font-mono: 'JetBrains Mono', monospace;
             --font-sans: 'Inter', sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background-color: var(--kali-bg);
             color: var(--text-main);
             font-family: var(--font-sans);
             overflow-x: hidden;
-            /* cursor: none; REMOVED */
         }
 
         /* BOOT SCREEN */
         #boot-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            z-index: 10000;
-            font-family: var(--font-mono);
-            padding: 2rem;
-            color: #0f0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            overflow-y: auto;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; z-index: 10000;
+            font-family: var(--font-mono); padding: 2rem; color: #0f0;
+            display: flex; flex-direction: column; justify-content: flex-end; overflow-y: auto;
         }
-        .boot-log { 
-            font-size: 0.85rem; 
-            line-height: 1.5; 
-            color: var(--kali-green);
-            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
-        }
+        .boot-log { font-size: 0.85rem; line-height: 1.5; color: var(--kali-green); text-shadow: 0 0 10px rgba(0, 255, 65, 0.5); }
 
         /* TOP BAR */
         .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 32px;
-            background: rgba(13, 17, 23, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1rem;
-            z-index: 5000;
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+            position: fixed; top: 0; left: 0; width: 100%; height: 32px;
+            background: rgba(13, 17, 23, 0.95); backdrop-filter: blur(10px);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 1rem; z-index: 5000;
+            font-family: var(--font-sans); font-size: 0.8rem; border-bottom: 1px solid rgba(0, 242, 255, 0.2);
         }
         .sys-stats { display: flex; gap: 1.5rem; }
         .stat-item { display: flex; align-items: center; gap: 6px; color: var(--text-muted); }
         .stat-val { color: var(--kali-blue); font-weight: 600; }
-        .threat-indicator {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: var(--kali-green);
-        }
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--kali-green);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.3; transform: scale(1.3); }
-        }
+        .threat-indicator { display: flex; align-items: center; gap: 5px; color: var(--kali-green); }
+        .pulse-dot { width: 8px; height: 8px; background: var(--kali-green); border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.3); } }
 
-        /* CONTAINER */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        section {
-            min-height: 100vh;
-            padding: 6rem 0;
-            position: relative;
-        }
+        /* LAYOUT */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        section { min-height: 100vh; padding: 6rem 0; position: relative; }
 
         /* HERO TERMINAL */
-        .hero-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 8rem;
-        }
-
+        .hero-section { display: flex; align-items: center; justify-content: center; padding-top: 8rem; }
         .terminal-window {
-            width: 100%;
-            max-width: 900px;
-            background: rgba(0, 0, 0, 0.9);
-            border: 1px solid rgba(0, 242, 255, 0.3);
-            border-radius: 8px;
-            box-shadow: 
-                0 0 40px rgba(0, 242, 255, 0.2),
-                0 20px 60px rgba(0, 0, 0, 0.8);
-            overflow: hidden;
-            font-family: var(--font-mono);
+            width: 100%; max-width: 900px; background: rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.2); overflow: hidden; font-family: var(--font-mono);
         }
-
         .terminal-header {
             background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
-            padding: 0.6rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 0.6rem 1rem; display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid rgba(0, 242, 255, 0.2);
         }
-
-        .dots-container {
-            display: flex;
-            gap: 8px;
-        }
-
+        .dots-container { display: flex; gap: 8px; }
         .dot { width: 12px; height: 12px; border-radius: 50%; }
-        .red { background: #ff5f56; box-shadow: 0 0 10px #ff5f56; }
-        .yellow { background: #ffbd2e; box-shadow: 0 0 10px #ffbd2e; }
-        .green { background: #27c93f; box-shadow: 0 0 10px #27c93f; }
-
-        .terminal-title {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .terminal-body {
-            padding: 2rem;
-            color: #ddd;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+        .terminal-title { color: var(--text-muted); font-size: 0.85rem; display: flex; align-items: center; gap: 8px; }
+        .terminal-body { padding: 2rem; color: #ddd; font-size: 0.95rem; line-height: 1.6; }
         .command-prompt { color: var(--kali-red); font-weight: bold; }
-        .path { color: var(--kali-blue); }
         .input-text { color: white; }
-        .cursor-blink { 
-            animation: blink 1s infinite; 
-            border-right: 2px solid var(--kali-blue);
-            padding-right: 2px;
-        }
+        .cursor-blink { animation: blink 1s infinite; border-right: 2px solid var(--kali-blue); padding-right: 2px; }
         @keyframes blink { 50% { border-color: transparent; } }
-
-        .terminal-output {
-            color: var(--kali-green);
-            margin: 0.5rem 0;
-            text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
-        }
+        .terminal-output { color: var(--kali-green); margin: 0.5rem 0; text-shadow: 0 0 5px rgba(0, 255, 65, 0.3); }
 
         /* SECTION TITLES */
         .section-title {
-            font-family: var(--font-mono);
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 4rem;
-            color: transparent;
-            -webkit-text-stroke: 2px rgba(0, 242, 255, 0.3);
-            position: relative;
-            display: inline-block;
+            font-family: var(--font-mono); font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 4rem; color: transparent; -webkit-text-stroke: 2px rgba(0, 242, 255, 0.3);
+            position: relative; display: inline-block;
         }
         .section-title::before {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: var(--kali-blue);
-            -webkit-text-stroke: 0;
-            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            content: attr(data-text); position: absolute; top: 0; left: 0; color: var(--kali-blue);
+            -webkit-text-stroke: 0; clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
             animation: glitch 3s infinite;
         }
         @keyframes glitch {
@@ -217,411 +102,112 @@
         }
 
         /* PROJECTS */
-        .projects-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
+        .projects-grid { display: grid; gap: 2rem; }
         .project-card {
             background: linear-gradient(135deg, rgba(13, 17, 23, 0.9) 0%, rgba(22, 27, 34, 0.9) 100%);
-            border: 1px solid rgba(48, 54, 61, 0.5);
-            border-radius: 12px;
-            padding: 2.5rem;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
+            border: 1px solid rgba(48, 54, 61, 0.5); border-radius: 12px; padding: 2.5rem;
+            position: relative; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden; cursor: pointer; /* Clickable cursor */
         }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 242, 255, 0.05) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-        
         .project-card:hover {
-            border-color: var(--kali-blue);
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 
-                0 0 40px rgba(0, 242, 255, 0.2),
-                0 20px 60px rgba(0, 0, 0, 0.5);
+            border-color: var(--kali-blue); transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
         }
-
-        .project-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--kali-blue), var(--kali-accent));
-            transform: scaleY(0);
-            transition: transform 0.4s ease;
-            transform-origin: bottom;
-        }
+        .project-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1.5rem; }
+        .project-title { font-family: var(--font-mono); font-size: 1.4rem; color: var(--kali-blue); display: flex; align-items: center; gap: 10px; }
         
-        .project-card:hover::after {
-            transform: scaleY(1);
-        }
+        .project-links { display: flex; gap: 1rem; z-index: 20; position: relative; }
+        .project-link { color: var(--text-muted); font-size: 1.2rem; transition: all 0.3s ease; text-decoration: none; }
+        .project-link:hover { color: var(--kali-blue); transform: scale(1.2); }
 
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1.5rem;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .project-title {
-            font-family: var(--font-mono);
-            font-size: 1.4rem;
-            color: var(--kali-blue);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .project-title i {
-            font-size: 1.2rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .project-link:hover {
-            color: var(--kali-blue);
-            transform: scale(1.2);
-        }
-
-        .project-desc {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .tools-used {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-        }
-
+        .project-desc { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem; }
+        .tools-used { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
         .tool-tag {
-            font-size: 0.8rem;
-            font-family: var(--font-mono);
-            background: rgba(0, 242, 255, 0.1);
-            color: var(--kali-blue);
-            padding: 6px 12px;
-            border-radius: 6px;
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            transition: all 0.3s ease;
+            font-size: 0.8rem; font-family: var(--font-mono); background: rgba(0, 242, 255, 0.1);
+            color: var(--kali-blue); padding: 6px 12px; border-radius: 6px; border: 1px solid rgba(0, 242, 255, 0.2);
         }
 
-        .tool-tag:hover {
-            background: rgba(0, 242, 255, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 242, 255, 0.3);
+        /* MODAL (MISSION DETAIL) */
+        .modal {
+            display: none; position: fixed; z-index: 10001; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+            justify-content: center; align-items: center;
         }
+        .modal.active { display: flex; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* SKILLS SECTION */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        .modal-content {
+            background: #0d1117; border: 1px solid var(--kali-blue); border-radius: 10px;
+            padding: 2.5rem; max-width: 800px; width: 90%; position: relative;
+            box-shadow: 0 0 50px rgba(0, 242, 255, 0.15); max-height: 90vh; overflow-y: auto;
         }
+        .close-modal {
+            position: absolute; top: 1rem; right: 1.5rem; color: #fff; font-size: 2rem; cursor: pointer;
+        }
+        .close-modal:hover { color: var(--kali-red); }
+        .modal-header h2 { font-family: var(--font-mono); color: var(--kali-blue); margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .modal-body { color: #ccc; line-height: 1.8; margin-bottom: 2rem; }
+        .learned-list { margin-top: 1.5rem; border-left: 2px solid var(--kali-green); padding-left: 1rem; }
+        .learned-list h4 { color: var(--kali-green); font-family: var(--font-mono); margin-bottom: 0.5rem; }
+        .learned-list li { margin-bottom: 0.5rem; color: #aaa; list-style-type: none; position: relative; padding-left: 15px; }
+        .learned-list li::before { content: '>'; color: var(--kali-green); position: absolute; left: 0; font-weight: bold; }
+        
+        .modal-repo-btn {
+            display: inline-block; padding: 10px 20px; background: var(--kali-blue); color: #000;
+            text-decoration: none; font-weight: bold; border-radius: 5px; font-family: var(--font-mono);
+            margin-top: 1rem; transition: 0.3s;
+        }
+        .modal-repo-btn:hover { background: #fff; box-shadow: 0 0 20px var(--kali-blue); }
 
+        /* SKILLS */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
         .skill-card {
             background: linear-gradient(135deg, rgba(13, 17, 23, 0.8) 0%, rgba(22, 27, 34, 0.8) 100%);
-            border: 1px solid rgba(48, 54, 61, 0.5);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid rgba(48, 54, 61, 0.5); border-radius: 12px; padding: 2rem;
+            text-align: center; transition: all 0.4s ease; position: relative; overflow: hidden;
         }
+        .skill-card:hover { border-color: var(--kali-blue); transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0, 242, 255, 0.2); }
+        .skill-icon { font-size: 3.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--kali-blue), var(--kali-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .skill-title { font-family: var(--font-mono); font-size: 1.2rem; color: var(--text-main); margin-bottom: 0.5rem; }
+        .skill-desc { color: var(--text-muted); font-size: 0.9rem; }
 
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: radial-gradient(circle, rgba(0, 242, 255, 0.1) 0%, transparent 70%);
-            transform: translate(-50%, -50%);
-            transition: all 0.5s ease;
-        }
+        /* MARQUEE */
+        .marquee-container { width: 100%; overflow: hidden; background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.05), transparent); padding: 2rem 0; margin: 4rem 0; }
+        .marquee-content { display: flex; gap: 5rem; animation: marquee 30s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .cert-item { display: flex; align-items: center; gap: 12px; white-space: nowrap; font-family: var(--font-mono); font-weight: bold; font-size: 1.3rem; color: var(--text-main); }
+        .cert-item i { color: var(--kali-blue); }
 
-        .skill-card:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .skill-card:hover {
-            border-color: var(--kali-blue);
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 15px 40px rgba(0, 242, 255, 0.2);
-        }
-
-        .skill-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--kali-blue), var(--kali-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .skill-card:hover .skill-icon {
-            transform: scale(1.2) rotateY(360deg);
-        }
-
-        .skill-title {
-            font-family: var(--font-mono);
-            font-size: 1.2rem;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-desc {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* CERTIFICATIONS MARQUEE */
-        .marquee-container {
-            width: 100%;
-            overflow: hidden;
-            background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.05), transparent);
-            padding: 2rem 0;
-            border-top: 1px solid rgba(0, 242, 255, 0.2);
-            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
-            margin: 4rem 0;
-            position: relative;
-        }
-
-        .marquee-content {
-            display: flex;
-            gap: 5rem;
-            animation: marquee 30s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .cert-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            white-space: nowrap;
-            font-family: var(--font-mono);
-            font-weight: bold;
-            font-size: 1.3rem;
-            color: var(--text-main);
-        }
-
-        .cert-item i {
-            color: var(--kali-blue);
-            font-size: 1.5rem;
-        }
-
-        /* DOCK NAVIGATION */
+        /* DOCK */
         .dock-container {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(13, 17, 23, 0.8);
-            backdrop-filter: blur(20px);
-            padding: 12px 24px;
-            border-radius: 20px;
-            display: flex;
-            gap: 2rem;
-            z-index: 5000;
-            border: 1px solid rgba(0, 242, 255, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(20px);
+            padding: 12px 24px; border-radius: 20px; display: flex; gap: 2rem; z-index: 5000;
+            border: 1px solid rgba(0, 242, 255, 0.3); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         }
-
-        .dock-item {
-            font-size: 1.8rem;
-            color: var(--text-muted);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            text-decoration: none;
-        }
-
-        .dock-item:hover {
-            transform: scale(1.4) translateY(-12px);
-            color: var(--kali-blue);
-            filter: drop-shadow(0 0 10px var(--kali-blue));
-        }
-
+        .dock-item { font-size: 1.8rem; color: var(--text-muted); transition: all 0.3s; position: relative; }
+        .dock-item:hover { transform: scale(1.4) translateY(-12px); color: var(--kali-blue); }
         .dock-item::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 120%;
-            left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            background: rgba(0, 0, 0, 0.95);
-            color: var(--kali-blue);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            font-family: var(--font-mono);
-            border: 1px solid rgba(0, 242, 255, 0.3);
+            content: attr(data-tooltip); position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%) translateY(10px);
+            background: rgba(0, 0, 0, 0.95); color: var(--kali-blue); padding: 6px 12px; border-radius: 6px; font-size: 0.75rem;
+            opacity: 0; pointer-events: none; transition: all 0.3s; white-space: nowrap; font-family: var(--font-mono); border: 1px solid rgba(0, 242, 255, 0.3);
         }
+        .dock-item:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-        .dock-item:hover::after {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        /* BACKGROUND EFFECTS */
+        /* BG */
         .bg-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: 
-                linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: -1;
-            pointer-events: none;
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: -1; pointer-events: none;
         }
-
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* CONTACT SECTION */
-        .contact-section {
-            text-align: center;
-            padding: 8rem 0;
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-title {
-            font-size: 3rem;
-            font-family: var(--font-mono);
-            color: var(--kali-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-desc {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-btn {
-            padding: 1rem 2rem;
-            background: rgba(0, 242, 255, 0.1);
-            border: 2px solid var(--kali-blue);
-            color: var(--kali-blue);
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background: var(--kali-blue);
-            color: var(--kali-bg);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.3);
-        }
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .dock-container {
-                gap: 1rem;
-                padding: 10px 20px;
-            }
-            
-            .dock-item {
-                font-size: 1.5rem;
-            }
-            
-            .project-header {
-                flex-direction: column;
-            }
-        }
-
-        /* SCROLL INDICATOR */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--kali-blue);
-            font-size: 2rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-10px); }
+            .section-title { font-size: 2.5rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .dock-container { gap: 1rem; padding: 10px 20px; }
+            .project-header { flex-direction: column; }
         }
     </style>
 </head>
@@ -632,6 +218,7 @@
 
     <div class="bg-grid"></div>
     <canvas class="particles"></canvas>
+
     <nav class="top-bar">
         <div class="left-menu">
             <i class="fa-brands fa-linux" style="margin-right:10px; font-size:1.1rem; color: var(--kali-blue);"></i> 
@@ -642,9 +229,8 @@
                 <div class="pulse-dot"></div>
                 <span>SECURE</span>
             </div>
-            <div class="stat-item"><i class="fa-solid fa-microchip"></i> CPU <span class="stat-val" id="cpu-val">12%</span></div>
-            <div class="stat-item"><i class="fa-solid fa-memory"></i> MEM <span class="stat-val" id="mem-val">4.2GB</span></div>
-            <div class="stat-item"><i class="fa-solid fa-network-wired"></i> ETH0 <span class="stat-val">UP</span></div>
+            <div class="stat-item"><i class="fa-solid fa-microchip"></i> <span id="cpu-val">12%</span></div>
+            <div class="stat-item"><i class="fa-solid fa-memory"></i> <span id="mem-val">4.2GB</span></div>
             <div class="stat-item" id="clock">00:00:00</div>
         </div>
     </nav>
@@ -654,23 +240,15 @@
             <div class="terminal-window">
                 <div class="terminal-header">
                     <div class="dots-container">
-                        <div class="dot red"></div>
-                        <div class="dot yellow"></div>
-                        <div class="dot green"></div>
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
                     </div>
-                    <div class="terminal-title">
-                        <i class="fa-solid fa-terminal"></i>
-                        <span>maverick@kali-soc: ~</span>
-                    </div>
+                    <div class="terminal-title"><i class="fa-solid fa-terminal"></i> <span>maverick@kali-soc: ~</span></div>
                     <div style="width: 60px;"></div>
                 </div>
                 <div class="terminal-body">
                     <p style="margin-bottom: 1rem; color: var(--text-muted);">Kali GNU/Linux Rolling [Version 2025.1] - SOC Edition</p>
                     <div id="typewriter-container"></div>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <i class="fa-solid fa-chevron-down"></i>
             </div>
         </section>
 
@@ -679,15 +257,32 @@
                 <div class="cert-item"><i class="fa-solid fa-certificate"></i> OSCP</div>
                 <div class="cert-item"><i class="fa-solid fa-shield-halved"></i> CISSP</div>
                 <div class="cert-item"><i class="fa-solid fa-bug"></i> CEH</div>
-                <div class="cert-item"><i class="fa-brands fa-python"></i> AUTOMATION</div>
                 <div class="cert-item"><i class="fa-solid fa-user-secret"></i> SOC ANALYST</div>
                 <div class="cert-item"><i class="fa-solid fa-fire"></i> THREAT HUNTER</div>
-                <div class="cert-item"><i class="fa-solid fa-code"></i> MALWARE ANALYST</div>
                 <div class="cert-item"><i class="fa-solid fa-certificate"></i> OSCP</div>
                 <div class="cert-item"><i class="fa-solid fa-shield-halved"></i> CISSP</div>
                 <div class="cert-item"><i class="fa-solid fa-bug"></i> CEH</div>
-                <div class="cert-item"><i class="fa-brands fa-python"></i> AUTOMATION</div>
                 <div class="cert-item"><i class="fa-solid fa-user-secret"></i> SOC ANALYST</div>
+            </div>
+        </div>
+
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-title">Project Title</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-desc">Description goes here...</p>
+                    <div class="learned-list">
+                        <h4>> INTEL_ACQUIRED / SKILLS_LEARNED:</h4>
+                        <ul id="modal-skills">
+                            </ul>
+                    </div>
+                </div>
+                <a id="modal-repo-btn" href="#" target="_blank" class="modal-repo-btn">
+                    <i class="fa-brands fa-github"></i> ACCESS REPO
+                </a>
             </div>
         </div>
 
@@ -695,259 +290,109 @@
             <h2 class="section-title" data-text="01_OPERATIONS">01_OPERATIONS</h2>
             
             <div class="projects-grid">
-                <div class="project-card fade-up">
+                
+                <div class="project-card fade-up" 
+                     data-title="Honeypot Network Infrastructure"
+                     data-desc="Deployed a distributed honeypot network across AWS infrastructure simulating a financial institution's database servers. Successfully captured and analyzed over 50,000 unique attack vectors in 30 days. Integrated with Splunk for real-time geolocation tracking, CVE mapping, and attacker behavior analysis."
+                     data-learned="Configuring Cowrie & Dionaea honeypots;Advanced Splunk Dashboard creation (GeoIP);Analyzing SSH brute force patterns;AWS VPC Security Groups hardening"
+                     data-repo="https://github.com/vatsalsapovadiya/honeypot-deception-system">
+                     
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-honeycomb"></i>
-                            Honeypot Network Infrastructure
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-honeycomb"></i> Honeypot Infrastructure</h3>
                         <div class="project-links">
                             <a href="https://github.com/vatsalsapovadiya/honeypot-deception-system" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
-                            <a href="#" class="project-link" title="Live Demo">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                        Deployed a distributed honeypot network across AWS infrastructure simulating a financial institution's database servers. Successfully captured and analyzed over 50,000 unique attack vectors in 30 days. Integrated with Splunk for real-time geolocation tracking, CVE mapping, and attacker behavior analysis. Implemented automated threat intelligence feed generation.
-                    </p>
+                    <p class="project-desc">Deployed a distributed honeypot network across AWS infrastructure simulating a financial institution's database servers. Captured 50,000+ vectors.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">AWS EC2</span>
-                        <span class="tool-tag">Docker</span>
-                        <span class="tool-tag">Splunk</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Cowrie</span>
-                        <span class="tool-tag">Elasticsearch</span>
+                        <span class="tool-tag">AWS EC2</span><span class="tool-tag">Docker</span><span class="tool-tag">Splunk</span><span class="tool-tag">Cowrie</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card fade-up"
+                     data-title="Wazuh SIEM Lab Deployment"
+                     data-desc="A comprehensive hands-on SIEM deployment project showcasing endpoint monitoring, threat detection, and security event analysis using Wazuh. This lab simulates a real-world SOC environment with agent enrollment, alert correlation, and MITRE ATT&CK framework mapping."
+                     data-learned="Wazuh Agent deployment & Manager configuration;Writing custom XML decoders;Mapping alerts to MITRE ATT&CK;File Integrity Monitoring (FIM) tuning"
+                     data-repo="https://github.com/vatsalsapovadiya/Wazuh">
+
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-biohazard"></i>
-                            Wazuh SIEM Lab Deployment 
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-biohazard"></i> Wazuh SIEM Lab</h3>
                         <div class="project-links">
                             <a href="https://github.com/vatsalsapovadiya/Wazuh" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                     A comprehensive hands-on SIEM deployment project showcasing endpoint monitoring, threat detection, and security event analysis using Wazuh. This lab simulates a real-world SOC environment with agent enrollment, alert correlation, and MITRE ATT&CK framework mapping.
-
-                    </p>
+                    <p class="project-desc">A comprehensive hands-on SIEM deployment project showcasing endpoint monitoring, threat detection, and security event analysis using Wazuh.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">Ghidra</span>
-                        <span class="tool-tag">REMnux</span>
-                        <span class="tool-tag">IDA Pro</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">YARA</span>
-                        <span class="tool-tag">Cuckoo Sandbox</span>
+                        <span class="tool-tag">Wazuh</span><span class="tool-tag">ELK Stack</span><span class="tool-tag">Sysmon</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card fade-up"
+                     data-title="SOAR Automation Platform"
+                     data-desc="Engineered Security Orchestration, Automation and Response (SOAR) playbooks using Ansible and Splunk Phantom. Automated incident response workflows for common attack scenarios including phishing, malware infections, and unauthorized access. Reduced Mean Time to Respond (MTTR) from 45 minutes to under 30 seconds for Tier 1 incidents."
+                     data-learned="Playbook logic design;API Integration (VirusTotal, HybridAnalysis);Automated email parsing;Reducing Alert Fatigue techniques"
+                     data-repo="https://github.com/yourusername/soar-playbooks">
+
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-robot"></i>
-                            SOAR Automation Platform
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-robot"></i> SOAR Automation</h3>
                         <div class="project-links">
                             <a href="https://github.com/yourusername/soar-playbooks" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
-                            <a href="#" class="project-link" title="Documentation">
-                                <i class="fa-solid fa-book"></i>
-                            </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                        Engineered Security Orchestration, Automation and Response (SOAR) playbooks using Ansible and Splunk Phantom. Automated incident response workflows for common attack scenarios including phishing, malware infections, and unauthorized access. Reduced Mean Time to Respond (MTTR) from 45 minutes to under 30 seconds for Tier 1 incidents. Integrated with 15+ security tools via REST APIs.
-                    </p>
+                    <p class="project-desc">Engineered SOAR playbooks using Ansible and Splunk Phantom. Automated incident response workflows reducing MTTR by 90%.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">Ansible</span>
-                        <span class="tool-tag">Splunk SOAR</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">TheHive</span>
-                        <span class="tool-tag">Cortex</span>
-                        <span class="tool-tag">REST APIs</span>
+                        <span class="tool-tag">Ansible</span><span class="tool-tag">Splunk SOAR</span><span class="tool-tag">Python</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card fade-up"
+                     data-title="Phishing Detection Engine"
+                     data-desc="Developed ML-powered phishing email detection system using NLP and behavioral analysis. Achieved 98.5% detection accuracy with minimal false positives. Automated email header analysis, URL reputation checking, and attachment sandboxing."
+                     data-learned="Natural Language Processing (NLP) for security;Feature extraction from Email Headers;TensorFlow model training;Sandboxing automation"
+                     data-repo="https://github.com/yourusername/phishing-detector">
+
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-fish"></i>
-                            Phishing Detection Engine
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-fish"></i> Phishing Detector</h3>
                         <div class="project-links">
                             <a href="https://github.com/yourusername/phishing-detector" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                        Developed ML-powered phishing email detection system using NLP and behavioral analysis. Achieved 98.5% detection accuracy with minimal false positives. Automated email header analysis, URL reputation checking, and attachment sandboxing. Integrated with email gateway for real-time blocking and user notifications.
-                    </p>
+                    <p class="project-desc">Developed ML-powered phishing email detection system using NLP and behavioral analysis. Achieved 98.5% detection accuracy.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">TensorFlow</span>
-                        <span class="tool-tag">NLP</span>
-                        <span class="tool-tag">VirusTotal API</span>
-                        <span class="tool-tag">Email Gateway</span>
+                        <span class="tool-tag">Python</span><span class="tool-tag">TensorFlow</span><span class="tool-tag">NLP</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-network-wired"></i>
-                            Threat Intelligence Platform
-                        </h3>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/threat-intel" target="_blank" class="project-link" title="View on GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="#" class="project-link" title="Dashboard">
-                                <i class="fa-solid fa-chart-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">
-                        Created centralized threat intelligence aggregation platform integrating OSINT feeds, MISP, and commercial feeds. Automated IoC enrichment, correlation, and distribution to security tools. Built custom dashboards for threat landscape visualization. Implemented STIX/TAXII for standardized threat data exchange.
-                    </p>
-                    <div class="tools-used">
-                        <span class="tool-tag">MISP</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">STIX/TAXII</span>
-                        <span class="tool-tag">AlienVault OTX</span>
-                        <span class="tool-tag">Elasticsearch</span>
-                        <span class="tool-tag">Kibana</span>
-                    </div>
-                </div>
-
-                <div class="project-card fade-up">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            Network Traffic Analyzer
-                        </h3>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/network-analyzer" target="_blank" class="project-link" title="View on GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">
-                        Built real-time network traffic analysis tool using Zeek and Suricata for deep packet inspection. Implemented custom detection rules for anomalous traffic patterns, data exfiltration attempts, and C2 communications. Integrated with SIEM for centralized logging and alerting. Processed 10TB+ of network data daily.
-                    </p>
-                    <div class="tools-used">
-                        <span class="tool-tag">Zeek</span>
-                        <span class="tool-tag">Suricata</span>
-                        <span class="tool-tag">Wireshark</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Splunk</span>
-                        <span class="tool-tag">pfSense</span>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section id="skills">
             <h2 class="section-title" data-text="02_ARSENAL">02_ARSENAL</h2>
             <div class="skills-grid">
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h4 class="skill-title">Threat Detection</h4>
-                    <p class="skill-desc">Advanced SIEM correlation rules, behavioral analytics, and anomaly detection across enterprise networks</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-fire"></i>
-                    </div>
-                    <h4 class="skill-title">Incident Response</h4>
-                    <p class="skill-desc">Rapid containment, forensic analysis, and remediation following NIST frameworks and SANS methodology</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-biohazard"></i>
-                    </div>
-                    <h4 class="skill-title">Malware Analysis</h4>
-                    <p class="skill-desc">Reverse engineering, sandbox analysis, and IoC extraction from advanced persistent threats</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-linux"></i>
-                    </div>
-                    <h4 class="skill-title">Linux Hardening</h4>
-                    <p class="skill-desc">System security configuration, kernel tuning, and penetration testing on Unix-based systems</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h4 class="skill-title">Security Automation</h4>
-                    <p class="skill-desc">Python scripting, PowerShell automation, and SOAR playbook development for efficient operations</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <h4 class="skill-title">Network Forensics</h4>
-                    <p class="skill-desc">Packet analysis, traffic baselining, and intrusion detection using Wireshark and Zeek</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    </div>
-                    <h4 class="skill-title">Threat Hunting</h4>
-                    <p class="skill-desc">Proactive threat discovery using MITRE ATT&CK framework, hypothesis-driven investigations</p>
-                </div>
-
-                <div class="skill-card fade-up">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h4 class="skill-title">Threat Intelligence</h4>
-                    <p class="skill-desc">OSINT collection, IoC correlation, and strategic threat landscape analysis</p>
-                </div>
+                <div class="skill-card fade-up"><div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div><h4 class="skill-title">Threat Detection</h4><p class="skill-desc">SIEM correlation & behavioral analytics</p></div>
+                <div class="skill-card fade-up"><div class="skill-icon"><i class="fa-solid fa-fire"></i></div><h4 class="skill-title">Incident Response</h4><p class="skill-desc">NIST frameworks & SANS methodology</p></div>
+                <div class="skill-card fade-up"><div class="skill-icon"><i class="fa-solid fa-biohazard"></i></div><h4 class="skill-title">Malware Analysis</h4><p class="skill-desc">Reverse engineering & IoC extraction</p></div>
+                <div class="skill-card fade-up"><div class="skill-icon"><i class="fa-brands fa-linux"></i></div><h4 class="skill-title">Linux Hardening</h4><p class="skill-desc">Kernel tuning & penetration testing</p></div>
+                <div class="skill-card fade-up"><div class="skill-icon"><i class="fa-solid fa-code"></i></div><h4 class="skill-title">Security Automation</h4><p class="skill-desc">Python, Bash & SOAR playbooks</p></div>
+                <div class="skill-card fade-up"><div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div><h4 class="skill-title">Network Forensics</h4><p class="skill-desc">Wireshark & Zeek packet analysis</p></div>
             </div>
         </section>
 
         <section id="contact" class="contact-section">
             <div class="contact-content">
                 <h2 class="contact-title">> INITIATE_CONTACT</h2>
-                <p class="contact-desc">
-                    Looking to strengthen your security posture? Let's discuss how I can help protect your infrastructure from evolving cyber threats.
-                </p>
                 <div class="contact-links">
-                    <a href="mailto:vatsalsapovadiya22@gmail.com" class="contact-btn">
-                        <i class="fa-solid fa-envelope"></i>
-                        Send Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/vatsalsapovadiya/" target="_blank" class="contact-btn">
-                        <i class="fa-brands fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/vatsalsapovadiya" target="_blank" class="contact-btn">
-                        <i class="fa-brands fa-github"></i>
-                        GitHub
-                    </a>
-                    <a href="https://raw.githubusercontent.com/vatsalsapovadiya/vatsalsapovadiya/main/Vatsal_Sapovadiya_Resume.pdf" download class="contact-btn">
-                        <i class="fa-solid fa-file-pdf"></i>
-                        Download CV
-                    </a>
+                    <a href="mailto:vatsalsapovadiya22@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Send Email</a>
+                    <a href="https://www.linkedin.com/in/vatsalsapovadiya/" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/vatsalsapovadiya" target="_blank" class="contact-btn"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
             </div>
         </section>
@@ -963,249 +408,144 @@
     </div>
 
     <script>
-        // PARTICLES BACKGROUND
+        // PARTICLES
         const canvas = document.querySelector('.particles');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
         class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2;
-                this.speedX = Math.random() * 0.5 - 0.25;
-                this.speedY = Math.random() * 0.5 - 0.25;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-            }
-
-            draw() {
-                ctx.fillStyle = 'rgba(0, 242, 255, 0.5)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
+            constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 2; this.speedX = Math.random() * 0.5 - 0.25; this.speedY = Math.random() * 0.5 - 0.25; }
+            update() { this.x += this.speedX; this.y += this.speedY; if (this.x > canvas.width) this.x = 0; if (this.x < 0) this.x = canvas.width; if (this.y > canvas.height) this.y = 0; if (this.y < 0) this.y = canvas.height; }
+            draw() { ctx.fillStyle = 'rgba(0, 242, 255, 0.5)'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); }
         }
-
-        const particles = [];
-        for (let i = 0; i < 100; i++) {
-            particles.push(new Particle());
-        }
-
+        const particles = []; for (let i = 0; i < 100; i++) particles.push(new Particle());
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-
-            // Connect particles
+            particles.forEach(p => { p.update(); p.draw(); });
             particles.forEach((a, i) => {
                 particles.slice(i + 1).forEach(b => {
-                    const dx = a.x - b.x;
-                    const dy = a.y - b.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 120) {
-                        ctx.strokeStyle = `rgba(0, 242, 255, ${1 - distance / 120})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.beginPath();
-                        ctx.moveTo(a.x, a.y);
-                        ctx.lineTo(b.x, b.y);
-                        ctx.stroke();
-                    }
+                    const dx = a.x - b.x; const dy = a.y - b.y; const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) { ctx.strokeStyle = `rgba(0, 242, 255, ${1 - dist / 120})`; ctx.lineWidth = 0.5; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
                 });
             });
-
             requestAnimationFrame(animateParticles);
         }
-
         animateParticles();
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
+        window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
 
         // BOOT SEQUENCE
         const bootText = document.getElementById('boot-text');
         const bootScreen = document.getElementById('boot-screen');
-        const logs = [
-            "[  OK  ] Started Show Plymouth Boot Screen.",
-            "[  OK  ] Reached target Paths.",
-            "[  OK  ] Reached target Basic System.",
-            "[  OK  ] Found device /dev/sda1.",
-            "[  OK  ] Started File System Check on /dev/sda1.",
-            "[  OK  ] Mounted /home/soc/portfolio.",
-            "[  OK  ] Starting Threat Detection Modules...",
-            "[  OK  ] Loading SIEM Dashboards...",
-            "[  OK  ] Initializing Security Operations Center...",
-            "Starting Kali Linux SOC Interface..."
-        ];
-
+        const logs = ["[ OK ] Started Boot Screen.", "[ OK ] Reached target Paths.", "[ OK ] Reached target Basic System.", "[ OK ] Found device /dev/sda1.", "[ OK ] Started File System Check.", "[ OK ] Mounted /home/soc/portfolio.", "[ OK ] Starting Threat Detection...", "[ OK ] Loading SIEM Dashboards...", "[ OK ] Initializing SOC...", "Starting Kali Linux SOC Interface..."];
         let logIndex = 0;
         const printLog = setInterval(() => {
             if (logIndex < logs.length) {
-                const div = document.createElement('div');
-                div.className = 'boot-log';
-                div.innerText = logs[logIndex];
-                bootText.appendChild(div);
-                bootScreen.scrollTop = bootScreen.scrollHeight;
-                logIndex++;
+                const div = document.createElement('div'); div.className = 'boot-log'; div.innerText = logs[logIndex];
+                bootText.appendChild(div); bootScreen.scrollTop = bootScreen.scrollHeight; logIndex++;
             } else {
                 clearInterval(printLog);
-                setTimeout(() => {
-                    bootScreen.style.transition = 'opacity 0.5s ease';
-                    bootScreen.style.opacity = '0';
-                    setTimeout(() => {
-                        bootScreen.style.display = 'none';
-                        startTerminal();
-                    }, 500);
-                }, 500);
+                setTimeout(() => { bootScreen.style.opacity = '0'; setTimeout(() => { bootScreen.style.display = 'none'; startTerminal(); }, 500); }, 500);
             }
         }, 150);
 
-        // TERMINAL TYPEWRITER
+        // TERMINAL
         function startTerminal() {
             const container = document.getElementById('typewriter-container');
             const lines = [
-                { 
-                    user: "root@kali-soc:~#", 
-                    cmd: " whoami", 
-                    output: "SOC Analyst | Threat Hunter | Incident Responder" 
-                },
-                { 
-                    user: "root@kali-soc:~#", 
-                    cmd: " cat /etc/mission.txt", 
-                    output: "Protecting infrastructure through proactive threat hunting,\nadvanced malware analysis, and intelligent security automation." 
-                },
-                { 
-                    user: "root@kali-soc:~#", 
-                    cmd: " python3 scan_threats.py --target all", 
-                    output: "[+] Scanning network for threats...\n[+] No active threats detected\n[+] All systems operational" 
-                },
-                { 
-                    user: "root@kali-soc:~#", 
-                    cmd: " ./init_portfolio.sh", 
-                    output: "[+] Loading modules... Done.\n[+] Portfolio initialized successfully.\n[+] Welcome to the SOC." 
-                }
+                { user: "root@kali-soc:~#", cmd: " whoami", output: "SOC Analyst | Threat Hunter | Incident Responder" },
+                { user: "root@kali-soc:~#", cmd: " cat /etc/mission.txt", output: "Protecting infrastructure through proactive threat hunting,\nadvanced malware analysis, and intelligent security automation." },
+                { user: "root@kali-soc:~#", cmd: " python3 scan_threats.py --target all", output: "[+] Scanning network for threats...\n[+] No active threats detected\n[+] All systems operational" },
+                { user: "root@kali-soc:~#", cmd: " ./init_portfolio.sh", output: "[+] Loading modules... Done.\n[+] Portfolio initialized successfully.\n[+] Welcome to the SOC." }
             ];
-
             let lineIndex = 0;
-            
             function typeLine() {
                 if (lineIndex >= lines.length) {
-                    const finalCursor = document.createElement('div');
-                    finalCursor.innerHTML = `<span class="command-prompt">root@kali-soc:~#</span><span class="cursor-blink"></span>`;
-                    container.appendChild(finalCursor);
-                    return;
+                    const finalCursor = document.createElement('div'); finalCursor.innerHTML = `<span class="command-prompt">root@kali-soc:~#</span><span class="cursor-blink"></span>`; container.appendChild(finalCursor); return;
                 }
-                
                 const line = lines[lineIndex];
-                const lineDiv = document.createElement('div');
-                lineDiv.innerHTML = `<span class="command-prompt">${line.user}</span><span class="input-text"></span><span class="cursor-blink"></span>`;
+                const lineDiv = document.createElement('div'); lineDiv.innerHTML = `<span class="command-prompt">${line.user}</span><span class="input-text"></span><span class="cursor-blink"></span>`;
                 container.appendChild(lineDiv);
-                
                 const inputSpan = lineDiv.querySelector('.input-text');
                 const cursor = lineDiv.querySelector('.cursor-blink');
-                
                 let charIndex = 0;
                 const typeChar = setInterval(() => {
-                    if (charIndex < line.cmd.length) {
-                        inputSpan.innerHTML += line.cmd.charAt(charIndex);
-                        charIndex++;
-                    } else {
-                        clearInterval(typeChar);
-                        cursor.remove();
-                        
-                        const outputDiv = document.createElement('div');
-                        outputDiv.className = 'terminal-output';
-                        outputDiv.style.marginBottom = '1rem';
-                        outputDiv.innerHTML = line.output.replace(/\n/g, '<br>');
-                        container.appendChild(outputDiv);
-                        
-                        lineIndex++;
-                        setTimeout(typeLine, 400);
+                    if (charIndex < line.cmd.length) { inputSpan.innerHTML += line.cmd.charAt(charIndex); charIndex++; }
+                    else {
+                        clearInterval(typeChar); cursor.remove();
+                        const outputDiv = document.createElement('div'); outputDiv.className = 'terminal-output'; outputDiv.style.marginBottom = '1rem'; outputDiv.innerHTML = line.output.replace(/\n/g, '<br>'); container.appendChild(outputDiv);
+                        lineIndex++; setTimeout(typeLine, 400);
                     }
                 }, 40);
             }
-            
             setTimeout(typeLine, 500);
         }
 
-        // SYSTEM STATS
+        // STATS
         function updateStats() {
-            const now = new Date();
-            document.getElementById('clock').innerText = now.toLocaleTimeString('en-US', { hour12: false });
-            
+            const now = new Date(); document.getElementById('clock').innerText = now.toLocaleTimeString('en-US', { hour12: false });
             if(Math.random() > 0.7) {
-                const cpu = Math.floor(Math.random() * 25) + 8;
-                const mem = (Math.random() * 2 + 3).toFixed(1);
-                document.getElementById('cpu-val').innerText = cpu + "%";
-                document.getElementById('mem-val').innerText = mem + "GB";
+                document.getElementById('cpu-val').innerText = (Math.floor(Math.random() * 25) + 8) + "%";
+                document.getElementById('mem-val').innerText = (Math.random() * 2 + 3).toFixed(1) + "GB";
             }
         }
-        setInterval(updateStats, 1000);
-        updateStats();
+        setInterval(updateStats, 1000); updateStats();
 
-        // GSAP SCROLL ANIMATIONS
+        // GSAP
         gsap.registerPlugin(ScrollTrigger);
-
-        // Fade up cards
         gsap.utils.toArray('.fade-up').forEach(card => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                },
-                y: 80,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            });
+            gsap.from(card, { scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none reverse" }, y: 80, opacity: 0, duration: 0.8, ease: "power3.out" });
         });
-
-        // Section titles parallax
         gsap.utils.toArray('.section-title').forEach(title => {
-            gsap.to(title, {
-                scrollTrigger: {
-                    trigger: title,
-                    scrub: 1,
-                    start: "top bottom",
-                    end: "bottom top"
-                },
-                x: 100
-            });
+            gsap.to(title, { scrollTrigger: { trigger: title, scrub: 1, start: "top bottom", end: "bottom top" }, x: 100 });
         });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // MODAL LOGIC
+        const modal = document.getElementById('project-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalSkills = document.getElementById('modal-skills');
+        const modalRepoBtn = document.getElementById('modal-repo-btn');
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // If the specific github icon link was clicked, do NOT open modal
+                if(e.target.closest('.project-link')) {
+                    return;
                 }
+
+                // Populate Modal Data
+                const title = card.getAttribute('data-title');
+                const desc = card.getAttribute('data-desc');
+                const skills = card.getAttribute('data-learned').split(';');
+                const repo = card.getAttribute('data-repo');
+
+                modalTitle.innerText = title;
+                modalDesc.innerText = desc;
+                modalRepoBtn.href = repo;
+
+                // Clear previous skills list
+                modalSkills.innerHTML = '';
+                skills.forEach(skill => {
+                    if(skill.trim()) {
+                        const li = document.createElement('li');
+                        li.innerText = skill;
+                        modalSkills.appendChild(li);
+                    }
+                });
+
+                // Show Modal
+                modal.classList.add('active');
             });
         });
 
-        // Hide scroll indicator on scroll
-        window.addEventListener('scroll', () => {
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator && window.scrollY > 100) {
-                scrollIndicator.style.opacity = '0';
-            } else if (scrollIndicator) {
-                scrollIndicator.style.opacity = '1';
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                modal.classList.remove('active');
             }
         });
     </script>
