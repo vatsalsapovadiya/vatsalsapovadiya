@@ -41,27 +41,7 @@
             color: var(--text-main);
             font-family: var(--font-sans);
             overflow-x: hidden;
-            cursor: none;
-        }
-
-        /* CUSTOM CURSOR */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--kali-blue);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: all 0.15s ease;
-            mix-blend-mode: difference;
-        }
-        .cursor.active {
-            width: 50px;
-            height: 50px;
-            background: rgba(0, 242, 255, 0.2);
-            border-color: var(--kali-blue);
+            /* cursor: none; REMOVED */
         }
 
         /* BOOT SCREEN */
@@ -626,14 +606,6 @@
             .project-header {
                 flex-direction: column;
             }
-            
-            body {
-                cursor: auto;
-            }
-            
-            .cursor {
-                display: none;
-            }
         }
 
         /* SCROLL INDICATOR */
@@ -660,8 +632,6 @@
 
     <div class="bg-grid"></div>
     <canvas class="particles"></canvas>
-    <div class="cursor"></div>
-
     <nav class="top-bar">
         <div class="left-menu">
             <i class="fa-brands fa-linux" style="margin-right:10px; font-size:1.1rem; color: var(--kali-blue);"></i> 
@@ -1171,30 +1141,6 @@
             
             setTimeout(typeLine, 500);
         }
-
-        // CUSTOM CURSOR
-        const cursor = document.querySelector('.cursor');
-        let mouseX = 0, mouseY = 0;
-        let cursorX = 0, cursorY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCursor() {
-            cursorX += (mouseX - cursorX) * 0.9;
-            cursorY += (mouseY - cursorY) * 0.9;
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-        
-        document.querySelectorAll('a, .project-card, .dock-item, .skill-card, .contact-btn').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
-        });
 
         // SYSTEM STATS
         function updateStats() {
