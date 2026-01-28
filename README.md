@@ -125,7 +125,7 @@ Passionate **Security Operations Center Analyst** with expertise in threat detec
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [Building an Effective Threat Hunting Program](https://yourblog.com/threat-hunting)
+- [Building a Production-Ready SIEM Lab: A Comprehensive Wazuh Deployment Guide for SOC Analysts](https://medium.com/@vatsalsapovadiya22/building-a-production-ready-siem-lab-a-comprehensive-wazuh-deployment-guide-for-soc-analysts-840b3927aaab)
 <!-- BLOG-POST-LIST:END -->
 
 ---
