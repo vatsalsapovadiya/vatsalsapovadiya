@@ -15,7 +15,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vatsalsapovadiya/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vatsalsapovadiya22@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://yourportfolio.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://vatsalsapovadiya.vercel.app)
 
 </div>
 
@@ -51,12 +51,10 @@ Passionate **Security Operations Center Analyst** with expertise in threat detec
 ### 🛡️ Security Tools
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Nmap-000000?style=flat&logo=nmap&logoColor=white)
-![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=flat&logo=metasploit&logoColor=white)
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=flat&logo=burp-suite&logoColor=white)
 
 ### 💻 Programming & Scripting
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat&logo=powershell&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
@@ -64,7 +62,6 @@ Passionate **Security Operations Center Analyst** with expertise in threat detec
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat&logo=kali-linux&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)
-![Red Hat](https://img.shields.io/badge/Red_Hat-EE0000?style=flat&logo=red-hat&logoColor=white)
 
 ### 🔐 Frameworks & Standards
 - **MITRE ATT&CK** - Threat modeling and detection
@@ -77,30 +74,20 @@ Passionate **Security Operations Center Analyst** with expertise in threat detec
 
 ## 🚀 Featured Projects
 
-### 🕸️ [Honeypot Network Infrastructure](https://github.com/vatsalsapovadiya/honeypot-project)
-Deployed distributed honeypot network capturing 50,000+ attack vectors. Integrated with Splunk for real-time threat intelligence.
-- **Tech Stack:** AWS, Docker, Splunk, Python, Cowrie
-- **Key Achievement:** Reduced false positive rate by 35%
+### 🕸️ [Honeypot Deception System](https://github.com/vatsalsapovadiya/honeypot-deception-system)
 
-### 🦠 [Ransomware Analysis Framework](https://github.com/vatsalsapovadiya/ransomware-analyzer)
-Automated malware analysis pipeline for ransomware variants with custom decryptor development.
-- **Tech Stack:** Ghidra, REMnux, Python, YARA
-- **Key Achievement:** Successfully analyzed 100+ malware samples
+
+### 🦠 [SIEM Implementation using Wazuh](https://github.com/vatsalsapovadiya/Wazuh)
+
 
 ### 🤖 [SOAR Automation Platform](https://github.com/vatsalsapovadiya/soar-playbooks)
-Security orchestration playbooks reducing MTTR from 45 minutes to 30 seconds for Tier 1 incidents.
-- **Tech Stack:** Ansible, Splunk SOAR, Python, TheHive
-- **Key Achievement:** Automated 80% of repetitive SOC tasks
+
 
 ### 🎣 [Phishing Detection Engine](https://github.com/vatsalsapovadiya/phishing-detector)
-ML-powered phishing detection system with 98.5% accuracy and minimal false positives.
-- **Tech Stack:** Python, TensorFlow, NLP, VirusTotal API
-- **Key Achievement:** Blocked 10,000+ phishing attempts
+
 
 ### 🌐 [Threat Intelligence Platform](https://github.com/vatsalsapovadiya/threat-intel)
-Centralized threat intelligence aggregation integrating OSINT feeds and commercial sources.
-- **Tech Stack:** MISP, Python, STIX/TAXII, Elasticsearch
-- **Key Achievement:** Processed 1M+ IoCs daily
+
 
 ---
 
@@ -122,61 +109,23 @@ Centralized threat intelligence aggregation integrating OSINT feeds and commerci
 
 ### Active Certifications
 
-🏆 **OSCP** - Offensive Security Certified Professional (2024)
-- Advanced penetration testing and exploit development
+🏆 **SOC Fundamentals** - Palo Alto Network Academy (2025)
 
-🏆 **CISSP** - Certified Information Systems Security Professional (2023)
-- Enterprise security architecture and risk management
+🏆 **Into the Trenches: Security Operations Center** - EC Council (2025)
 
-🏆 **CEH** - Certified Ethical Hacker (2023)
-- Ethical hacking methodologies and tools
+🏆 **Introduction to Cybersecurity** -   (2024)
 
-🏆 **GCIH** - GIAC Certified Incident Handler (2024)
-- Advanced incident response and forensics
+🏆 **SOC for Blue Teaming** (2025)
 
-🏆 **Blue Team Level 1 & 2** (2023)
-- Security operations and defensive techniques
-
-🏆 **Splunk Core Certified Power User** (2024)
-- Advanced SIEM analysis and dashboard creation
-
-### Specialized Training
-- MITRE ATT&CK Defender (MAD) Training
-- SANS SEC504: Hacker Tools, Techniques, and Incident Handling
-- Malware Analysis and Reverse Engineering
-- Cloud Security Fundamentals (AWS/Azure)
+🏆 **Introduction to SIEM** - Splunk (2024)
 
 ---
 
-## 📈 Current Focus
-
-🔭 **Working On:**
-- Advanced threat hunting using MITRE ATT&CK framework
-- Building custom detection rules for emerging threats
-- Developing automated incident response playbooks
-- Contributing to open-source security tools
-
-🌱 **Learning:**
-- Cloud security (AWS, Azure security)
-- Container security (Docker, Kubernetes)
-- Advanced malware reverse engineering
-- Threat intelligence automation
-
-💡 **Interests:**
-- Adversary simulation & purple teaming
-- Security automation & orchestration
-- Threat intelligence sharing
-- Open-source security tools
-
----
 
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
 - [Building an Effective Threat Hunting Program](https://yourblog.com/threat-hunting)
-- [Automating SOC Operations with Python](https://yourblog.com/soc-automation)
-- [Deep Dive: Analyzing LockBit Ransomware](https://yourblog.com/lockbit-analysis)
-- [Creating Custom YARA Rules for Malware Detection](https://yourblog.com/yara-rules)
 <!-- BLOG-POST-LIST:END -->
 
 ---
@@ -187,7 +136,7 @@ I'm always interested in collaborating on cybersecurity projects, discussing thr
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/vatsalsapovadiya/)
 - 📧 [Email](mailto:vatsalsapovadiya22@gmail.com)
-- 🌐 [Portfolio](https://yourportfolio.com)
+- 🌐 [Portfolio](https://vatsalsapovadiya.vercel.app)
 - 🐦 [Twitter](https://twitter.com/yourhandle)
 
 ---
