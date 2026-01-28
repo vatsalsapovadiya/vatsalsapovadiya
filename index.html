@@ -1172,29 +1172,33 @@
             setTimeout(typeLine, 500);
         }
 
-        // CUSTOM CURSOR
-        const cursor = document.querySelector('.cursor');
-        let mouseX = 0, mouseY = 0;
-        let cursorX = 0, cursorY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCursor() {
-            cursorX += (mouseX - cursorX) * 0.9;
-            cursorY += (mouseY - cursorY) * 0.9;
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
-            requestAnimationFrame(animateCursor);
+        /* --- CUSTOM CURSOR (Crosshair Style for Precision) --- */
+        .cursor {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 1px dashed var(--kali-blue); /* Dashed for "Targeting" feel */
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+            mix-blend-mode: exclusion;
         }
-        animateCursor();
-        
-        document.querySelectorAll('a, .project-card, .dock-item, .skill-card, .contact-btn').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
-        });
+        .cursor::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 4px; height: 4px;
+            background: var(--kali-blue);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cursor.active {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: rgba(0, 242, 255, 0.1);
+            border-style: solid;
+        }
 
         // SYSTEM STATS
         function updateStats() {
