@@ -725,164 +725,87 @@
             <h2 class="section-title" data-text="01_OPERATIONS">01_OPERATIONS</h2>
             
             <div class="projects-grid">
-                <div class="project-card fade-up">
+                
+                <div class="project-card fade-up" 
+                     data-title="Honeypot Network Infrastructure"
+                     data-desc="Deployed a distributed honeypot network across AWS infrastructure simulating a financial institution's database servers. Successfully captured and analyzed over 50,000 unique attack vectors in 30 days. Integrated with Splunk for real-time geolocation tracking, CVE mapping, and attacker behavior analysis."
+                     data-learned="Configuring Cowrie & Dionaea honeypots;Advanced Splunk Dashboard creation (GeoIP);Analyzing SSH brute force patterns;AWS VPC Security Groups hardening"
+                     data-repo="https://github.com/vatsalsapovadiya/honeypot-deception-system">
+                     
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-honeycomb"></i>
-                            Honeypot Network Infrastructure
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-honeycomb"></i> Honeypot Infrastructure</h3>
                         <div class="project-links">
                             <a href="https://github.com/vatsalsapovadiya/honeypot-deception-system" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
-                            <a href="#" class="project-link" title="Live Demo">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                        Deployed a distributed honeypot network across AWS infrastructure simulating a financial institution's database servers. Successfully captured and analyzed over 50,000 unique attack vectors in 30 days. Integrated with Splunk for real-time geolocation tracking, CVE mapping, and attacker behavior analysis. Implemented automated threat intelligence feed generation.
-                    </p>
+                    <p class="project-desc">Deployed a distributed honeypot network across AWS infrastructure simulating a financial institution's database servers. Captured 50,000+ vectors.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">AWS EC2</span>
-                        <span class="tool-tag">Docker</span>
-                        <span class="tool-tag">Splunk</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Cowrie</span>
-                        <span class="tool-tag">Elasticsearch</span>
+                        <span class="tool-tag">AWS EC2</span><span class="tool-tag">Docker</span><span class="tool-tag">Splunk</span><span class="tool-tag">Cowrie</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card fade-up"
+                     data-title="Wazuh SIEM Lab Deployment"
+                     data-desc="A comprehensive hands-on SIEM deployment project showcasing endpoint monitoring, threat detection, and security event analysis using Wazuh. This lab simulates a real-world SOC environment with agent enrollment, alert correlation, and MITRE ATT&CK framework mapping."
+                     data-learned="Wazuh Agent deployment & Manager configuration;Writing custom XML decoders;Mapping alerts to MITRE ATT&CK;File Integrity Monitoring (FIM) tuning"
+                     data-repo="https://github.com/vatsalsapovadiya/Wazuh">
+
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-biohazard"></i>
-                            Wazuh SIEM Lab Deployment 
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-biohazard"></i> Wazuh SIEM Lab</h3>
                         <div class="project-links">
                             <a href="https://github.com/vatsalsapovadiya/Wazuh" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                     A comprehensive hands-on SIEM deployment project showcasing endpoint monitoring, threat detection, and security event analysis using Wazuh. This lab simulates a real-world SOC environment with agent enrollment, alert correlation, and MITRE ATT&CK framework mapping.
-
-                    </p>
+                    <p class="project-desc">A comprehensive hands-on SIEM deployment project showcasing endpoint monitoring, threat detection, and security event analysis using Wazuh.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">Ghidra</span>
-                        <span class="tool-tag">REMnux</span>
-                        <span class="tool-tag">IDA Pro</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">YARA</span>
-                        <span class="tool-tag">Cuckoo Sandbox</span>
+                        <span class="tool-tag">Wazuh</span><span class="tool-tag">ELK Stack</span><span class="tool-tag">Sysmon</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card fade-up"
+                     data-title="SOAR Automation Platform"
+                     data-desc="Engineered Security Orchestration, Automation and Response (SOAR) playbooks using Ansible and Splunk Phantom. Automated incident response workflows for common attack scenarios including phishing, malware infections, and unauthorized access. Reduced Mean Time to Respond (MTTR) from 45 minutes to under 30 seconds for Tier 1 incidents."
+                     data-learned="Playbook logic design;API Integration (VirusTotal, HybridAnalysis);Automated email parsing;Reducing Alert Fatigue techniques"
+                     data-repo="https://github.com/yourusername/soar-playbooks">
+
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-robot"></i>
-                            SOAR Automation Platform
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-robot"></i> SOAR Automation</h3>
                         <div class="project-links">
                             <a href="https://github.com/yourusername/soar-playbooks" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
-                            <a href="#" class="project-link" title="Documentation">
-                                <i class="fa-solid fa-book"></i>
-                            </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                        Engineered Security Orchestration, Automation and Response (SOAR) playbooks using Ansible and Splunk Phantom. Automated incident response workflows for common attack scenarios including phishing, malware infections, and unauthorized access. Reduced Mean Time to Respond (MTTR) from 45 minutes to under 30 seconds for Tier 1 incidents. Integrated with 15+ security tools via REST APIs.
-                    </p>
+                    <p class="project-desc">Engineered SOAR playbooks using Ansible and Splunk Phantom. Automated incident response workflows reducing MTTR by 90%.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">Ansible</span>
-                        <span class="tool-tag">Splunk SOAR</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">TheHive</span>
-                        <span class="tool-tag">Cortex</span>
-                        <span class="tool-tag">REST APIs</span>
+                        <span class="tool-tag">Ansible</span><span class="tool-tag">Splunk SOAR</span><span class="tool-tag">Python</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card fade-up"
+                     data-title="Phishing Detection Engine"
+                     data-desc="Developed ML-powered phishing email detection system using NLP and behavioral analysis. Achieved 98.5% detection accuracy with minimal false positives. Automated email header analysis, URL reputation checking, and attachment sandboxing."
+                     data-learned="Natural Language Processing (NLP) for security;Feature extraction from Email Headers;TensorFlow model training;Sandboxing automation"
+                     data-repo="https://github.com/yourusername/phishing-detector">
+
                     <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-fish"></i>
-                            Phishing Detection Engine
-                        </h3>
+                        <h3 class="project-title"><i class="fa-solid fa-fish"></i> Phishing Detector</h3>
                         <div class="project-links">
                             <a href="https://github.com/yourusername/phishing-detector" target="_blank" class="project-link" title="View on GitHub">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="project-desc">
-                        Developed ML-powered phishing email detection system using NLP and behavioral analysis. Achieved 98.5% detection accuracy with minimal false positives. Automated email header analysis, URL reputation checking, and attachment sandboxing. Integrated with email gateway for real-time blocking and user notifications.
-                    </p>
+                    <p class="project-desc">Developed ML-powered phishing email detection system using NLP and behavioral analysis. Achieved 98.5% detection accuracy.</p>
                     <div class="tools-used">
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">TensorFlow</span>
-                        <span class="tool-tag">NLP</span>
-                        <span class="tool-tag">VirusTotal API</span>
-                        <span class="tool-tag">Email Gateway</span>
+                        <span class="tool-tag">Python</span><span class="tool-tag">TensorFlow</span><span class="tool-tag">NLP</span>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-network-wired"></i>
-                            Threat Intelligence Platform
-                        </h3>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/threat-intel" target="_blank" class="project-link" title="View on GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="#" class="project-link" title="Dashboard">
-                                <i class="fa-solid fa-chart-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">
-                        Created centralized threat intelligence aggregation platform integrating OSINT feeds, MISP, and commercial feeds. Automated IoC enrichment, correlation, and distribution to security tools. Built custom dashboards for threat landscape visualization. Implemented STIX/TAXII for standardized threat data exchange.
-                    </p>
-                    <div class="tools-used">
-                        <span class="tool-tag">MISP</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">STIX/TAXII</span>
-                        <span class="tool-tag">AlienVault OTX</span>
-                        <span class="tool-tag">Elasticsearch</span>
-                        <span class="tool-tag">Kibana</span>
-                    </div>
-                </div>
-
-                <div class="project-card fade-up">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            Network Traffic Analyzer
-                        </h3>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/network-analyzer" target="_blank" class="project-link" title="View on GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">
-                        Built real-time network traffic analysis tool using Zeek and Suricata for deep packet inspection. Implemented custom detection rules for anomalous traffic patterns, data exfiltration attempts, and C2 communications. Integrated with SIEM for centralized logging and alerting. Processed 10TB+ of network data daily.
-                    </p>
-                    <div class="tools-used">
-                        <span class="tool-tag">Zeek</span>
-                        <span class="tool-tag">Suricata</span>
-                        <span class="tool-tag">Wireshark</span>
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Splunk</span>
-                        <span class="tool-tag">pfSense</span>
-                    </div>
-                </div>
             </div>
         </section>
 
